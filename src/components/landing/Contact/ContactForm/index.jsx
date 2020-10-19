@@ -43,7 +43,7 @@ export default () => (
       } catch (err) {
         setSubmitting(false);
         setFieldValue('success', false);
-				alert('Something went wrong, please try again!') // eslint-disable-line
+        alert('Something went wrong, please try again!');
       }
     }}
   >
@@ -107,7 +107,7 @@ export default () => (
           </InputField>
         )}
         <Center>
-          <Button secondary type="submit" disabled={isSubmitting}>
+          <Button type="submit" disabled={isSubmitting}>
             Submit
           </Button>
         </Center>

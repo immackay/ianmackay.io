@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import { Link } from 'gatsby';
 import { ThemeContext } from 'providers/ThemeProvider';
 import { Container } from 'components/common';
+import { author } from 'data/config';
 import NavbarLinks from '../NavbarLinks';
 import { Wrapper, Brand } from './styles';
 
@@ -11,7 +12,7 @@ const Navbar = () => {
   return (
     <Wrapper as={Container}>
       <Brand as={Link} to="/" theme={theme}>
-        John Doe
+        {author}
       </Brand>
       <NavbarLinks desktop />
     </Wrapper>
