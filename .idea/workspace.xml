@@ -2,18 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6ad508a9-a930-4788-be01-cd4de34bd760" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/components/common/Button/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/Button/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/SEO/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/SEO/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/landing/Contact/ContactForm/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/landing/Contact/ContactForm/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/landing/Contact/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/landing/Contact/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/landing/Intro/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/landing/Intro/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/landing/Skills/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/landing/Skills/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/theme/Footer/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/theme/Footer/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/theme/Footer/social.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/theme/Footer/social.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/theme/Footer/styles.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/theme/Footer/styles.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/theme/Header/Navbar/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/theme/Header/Navbar/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/favicon/favicon-512.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/favicon/favicon-512.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/favicon/favicon-512.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/icons/github.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/icons/linkedin.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/icons/stackoverflow.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/icons/telegram.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/icons/twitter.svg" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,6 +33,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="dart.analysis.tool.window.visible" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/public" />
@@ -67,16 +63,22 @@
       <workItem from="1603063047621" duration="181000" />
       <workItem from="1603063241487" duration="624000" />
       <workItem from="1603065194162" duration="1689000" />
+      <workItem from="1637886716203" duration="1991000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
-  <component name="WindowStateProjectService">
-    <state x="149" y="190" key="SettingsEditor" timestamp="1602384064567">
-      <screen x="0" y="23" width="2560" height="1057" />
-    </state>
-    <state x="149" y="190" key="SettingsEditor/0.23.2560.1057/0.-1057.2560.1057/-1080.-1263.1080.2537@0.23.2560.1057" timestamp="1602384064567" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
