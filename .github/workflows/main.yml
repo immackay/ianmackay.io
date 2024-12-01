@@ -37,7 +37,7 @@ jobs:
           pnpm-version: 9
           prefer-offline: true
       - name: Install dependencies
-        run: pnpm ci
+        run: pnpm i
       - name: Build
         run: pnpm run build
       - name: Setup Pages
