@@ -28,6 +28,8 @@ export interface LayoutConfig {
   bodyFontFamily: Property.FontFamily;
   bodyFontWeight: Property.FontWeight;
   bodyFontSize: Property.FontSize;
+
+  linkColor: Property.Color;
 }
 export const layout: LayoutConfig = {
   fonts: [
@@ -58,6 +60,8 @@ export const layout: LayoutConfig = {
   bodyFontFamily: 'Lora',
   bodyFontWeight: 'normal',
   bodyFontSize: '10px',
+
+  linkColor: '#6c54c4',
 };
 
 const LayoutContext = createContext<LayoutConfig>(layout);

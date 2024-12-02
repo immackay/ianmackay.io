@@ -1,3 +1,8 @@
+export interface ResumeLink {
+  text: string;
+  url: string;
+  type: "mail" | "phone" | "url";
+}
 export interface ResumeConfig {
   options?: {
     showEducation?: boolean;
@@ -9,12 +14,12 @@ export interface ResumeConfig {
   };
   name: string;
   contact: {
-    location?: string;
-    email?: string;
-    phone?: string;
-    linkedin?: string;
-    website?: string;
-    github?: string;
+    location?: ResumeLink;
+    email?: ResumeLink;
+    phone?: ResumeLink;
+    linkedin?: ResumeLink;
+    website?: ResumeLink;
+    github?: ResumeLink;
   };
   summary: string;
   experience: Array<{
@@ -85,9 +90,21 @@ export const {
   },
   name: "Ian MacKay",
   contact: {
-    linkedin: "in/immackay",
-    website: "ianmackay.io",
-    github: "immackay",
+    linkedin: {
+      text: "in/immackay",
+      url: "https://linkedin.com/in/immackay",
+      type: "url",
+    },
+    website: {
+      text: "ianmackay.io",
+      url: "https://ianmackay.io",
+      type: "url",
+    },
+    github: {
+      text: "immackay",
+      url: "https://github.com/immackay",
+      type: "url",
+    },
   },
   summary:
     "Driven lifelong developer with a strong background in cloud-native distributed systems, global-scale systems design, and full-stack web/mobile development. Experienced with team leadership, mentoring of junior developers, shipping high-impact features, and working with customers.",

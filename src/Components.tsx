@@ -1,8 +1,9 @@
-import { ComponentType, PropsWithChildren, ReactNode } from "react";
+import { ComponentType, PropsWithChildren, ReactNode, useMemo } from "react";
 
 import styles from "./components.module.css";
 import { useLayout } from "./Layout.tsx";
 import { icons } from "./icons";
+import { ResumeLink } from "./resume.config.ts";
 
 export const Page = ({ children }: PropsWithChildren) => {
   return <div className={styles.page}>{children}</div>;
@@ -31,31 +32,46 @@ export const ContactSection = ({
 export const ContactSectionItem = ({
   Icon,
   children,
-}: PropsWithChildren<{ Icon?: ComponentType<IconProps> }>) => (
-  <div className={styles.contactSectionItem}>
-    {Icon && <Icon height={15} />}
-    {children}
-  </div>
-);
+}: {
+  Icon?: ComponentType<IconProps>;
+  children: ResumeLink | undefined;
+}) => {
+  const { linkColor } = useLayout();
+  const href = useMemo(() => {
+    if (!children) return "";
+    switch (children?.type) {
+      case "mail":
+        return `mailto:${children.url}`;
+      case "phone":
+        return `tel:${children.url}`;
+      default:
+        return children.url;
+    }
+  }, [children]);
 
-export const Mail = ({ children }: PropsWithChildren) => (
-  <ContactSectionItem Icon={icons.Mail}>{children}</ContactSectionItem>
-);
-export const Phone = ({ children }: PropsWithChildren) => (
-  <ContactSectionItem Icon={icons.Phone}>{children}</ContactSectionItem>
-);
-export const Location = ({ children }: PropsWithChildren) => (
-  <ContactSectionItem Icon={icons.Location}>{children}</ContactSectionItem>
-);
-export const Link = ({ children }: PropsWithChildren) => (
-  <ContactSectionItem Icon={icons.Link}>{children}</ContactSectionItem>
-);
-export const GitHub = ({ children }: PropsWithChildren) => (
-  <ContactSectionItem Icon={icons.GitHub}>{children}</ContactSectionItem>
-);
-export const LinkedIn = ({ children }: PropsWithChildren) => (
-  <ContactSectionItem Icon={icons.LinkedIn}>{children}</ContactSectionItem>
-);
+  return (
+    <div
+      className={styles.contactSectionItem}
+      // @ts-expect-error css variable
+      style={{ "--link-color": linkColor }}
+    >
+      {children ? (
+        <a href={href}>
+          {Icon && <Icon height={15} />}
+          <span>{children.text}</span>
+        </a>
+      ) : (
+        <span />
+      )}
+    </div>
+  );
+};
+
+export const [Mail, Phone, Location, Link, GitHub, LinkedIn] = (
+  ["Mail", "Phone", "Location", "Link", "GitHub", "LinkedIn"] as const
+).map((name) => ({ children }: { children: ResumeLink | undefined }) => (
+  <ContactSectionItem Icon={icons[name]}>{children}</ContactSectionItem>
+));
 
 export const Section = ({
   style,
